@@ -1,0 +1,14 @@
+
+1. Perform scan using the SCC tool provided at https://public.cyber.mil/stigs/scap/. The score for a base Windows Server 2019 Base image was 36% compliant. 
+2. Install Python on Ansible control node (dnf install python)
+3. Install Ansible on Ansible control node (pip3.11 install ansible)
+4. Install WinRM on Ansible control node (pip3.11 install pywinrm)
+5. Install Git (dnf install git)
+6. Clone Git repository to push MindPoint/Ansible-Lockdown content to Ansible control node. (git clone https://github.com/ansible-lockdown/Windows-2019-STIG)
+7. Create Ansible directory to build the .ini (inventory) file in. Windows uses .ini format to store target hosts.
+8. Install dependencies listed on the Git repository ReadME.md
+   - passlib (or python2-passlib, if using python2)
+   - python-lxml
+   - python-xmltodict
+   - python-jmespath
+9. Final command to run the playbook: ansible-playbook -i /etc/ansible/window.ini ./site.yml (ran out of the cloned repository directory)***
