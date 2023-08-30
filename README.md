@@ -3,7 +3,7 @@ Running Ansible Playbook for Windows STIG Compliance (BETA TEST ON STANDALONE NO
 Observations:
 Remote SCC scanning only works when target systems are in the same AD domain as the client. This is why my lab scan attempt to the EC2 instance was unsuccessful. This is explained in: https://www.youtube.com/watch?v=asutYWy57Yc (NAVWAR's SCAP Compliance Checker Tutorial 1: Introduction to SCAP and SCC)
 
-PowerShell commands used to setup WinRM on AWS EC2 test target (We will adjust to your own requirements for our network):
+PowerShell commands used to setup WinRM on AWS EC2 test target (We will adjust to our own requirements for our network):
 # Enable PowerShell remoting
 Enable-PSRemoting -Force
 
